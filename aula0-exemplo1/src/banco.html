@@ -3,32 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Exemplo 1</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/css/bootstrap.css">
 </head>
 <body>
-<div>
+<div class="container margem">
     <section>
-        <nav>
+        <nav class="navbar navbar-dark bg-dark">
             <hr>
-            <a href="index.html">Principal</a>
-            <a href="banco.html">Banco de dados e JDBC</a>
-            <a href="javaEE.html">O que é o java EE</a>
-            <a href="jsp.html">Servelets</a>
-            <a href="servelets.html">TagLibs</a>
-            <a href="taglibs.html">TagLibs</a>
+            <a class="navbar-brand" href="index.html">Principal</a>
+            <a class="navbar-brand" href="banco.html">Banco de dados e JDBC</a>
+            <a class="navbar-brand" href="javaEE.html">O que é o java EE</a>
+            <a class="navbar-brand" href="jsp.html">JSP</a>
+            <a class="navbar-brand" href="servelets.html">Servelets</a>
+            <a class="navbar-brand" href="taglibs.html">TagLibs</a>
             <hr>
         </nav>
     </section>
     <main>
-            <h1>Por que usar um banco de dados?</h1>
-            <p>Um banco de dados é, basicamente, uma coleção de informações organizadas de modo que possam ser facilmente acessadas, gerenciadas e atualizadas. Ele pode ser classificado de acordo com os tipos de conteúdo que comporta (bibliográficos, full-text, numéricos, vídeos, imagens etc), área de aplicação e aspecto técnico.</p>
-            <p>Os diferentes tipos de bancos de dados incluem bancos operacionais, de usuário final, distribuídos, analíticos, relacionais, hierárquicos etc.</p>
-            <p>Tecnicamente falando, sua principal função é interagir com sistemas de gerenciamento para capturar e analisar dados. Sistemas de gerenciamento, neste caso, são aqueles projetados para permitir criação, consulta e administração de bancos de dados, tais como os populares PostgreSQL, MySQL, Microsoft SQL Server, Oracle, IBM DB2 e SAP.</p>
-            <h1>A conexao em java</h1>
-            <p>A conexao é boa demais</p>
+            <h1 class="margem jumbotron text-center">Por que usar um banco de dados?</h1>
+            <p class="text-justify">Um banco de dados é, basicamente, uma coleção de informações organizadas de modo que possam ser facilmente acessadas, gerenciadas e atualizadas. Ele pode ser classificado de acordo com os tipos de conteúdo que comporta (bibliográficos, full-text, numéricos, vídeos, imagens etc), área de aplicação e aspecto técnico.</p>
+            <p class="text-justify">Os diferentes tipos de bancos de dados incluem bancos operacionais, de usuário final, distribuídos, analíticos, relacionais, hierárquicos etc.</p>
+            <p class="text-justify">Tecnicamente falando, sua principal função é interagir com sistemas de gerenciamento para capturar e analisar dados. Sistemas de gerenciamento, neste caso, são aqueles projetados para permitir criação, consulta e administração de bancos de dados, tais como os populares PostgreSQL, MySQL, Microsoft SQL Server, Oracle, IBM DB2 e SAP.</p>
+            <h1 class="text-justify">A conexao em java</h1>
+            <p class="text-justify">A conexao é boa demais</p>
             <img src="img/rank.PNG" alt="Imagem do banco de dados" style="width:500px;height:500px">
     </main>
-    <footer>
-        <p>
+    <footer >
+        <p class="margem jumbotron text-center">
             Primeira aula de Programação Web
         </p>
     </footer>

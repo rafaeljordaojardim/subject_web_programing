@@ -3,18 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Exemplo 1</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/css/bootstrap.css">
+    <script type="text/javascript">
+        function validar(){
+            let n = document.formulario.txtNome.value;
+            if(n==""){
+                alert('Campo Obrigatório. Digite o nome');
+                document.formulario.txtNome.focus();
+            }
+        }
+
+
+    </script>
 </head>
 <body>
-<div>
+<div class="container margem">
     <section>
-        <nav>
+        <nav class="navbar navbar-dark bg-dark">
             <hr>
-            <a href="index.html">Principal</a>
-            <a href="banco.html">Banco de dados e JDBC</a>
-            <a href="javaEE.html">O que é o java EE</a>
-            <a href="jsp.html">Servelets</a>
-            <a href="servelets.html">TagLibs</a>
-            <a href="taglibs.html">TagLibs</a>
+            <a class="navbar-brand" href="index.html">Principal</a>
+            <a class="navbar-brand" href="banco.html">Banco de dados e JDBC</a>
+            <a class="navbar-brand" href="javaEE.html">O que é o java EE</a>
+            <a class="navbar-brand" href="jsp.html">JSP</a>
+            <a class="navbar-brand" href="servelets.html">Servelets</a>
+            <a class="navbar-brand" href="taglibs.html">TagLibs</a>
             <hr>
         </nav>
     </section>
@@ -26,12 +39,101 @@
             <li>java server oages akgymas coisas que acontecem sao amas asuhdas</li>
             <li>java server oages akgymas coisas que acontecem sao amas asuhdas</li>
             <li>java server oages akgymas coisas que acontecem sao amas asuhdas</li>
-            <li>java server oages akgymas coisas que acontecem sao amas asuhdas</li>
-            <li>java server oages akgymas coisas que acontecem sao amas asuhdas</li>
-            <li>java server oages akgymas coisas que acontecem sao amas asuhdas</li>
-            <li>java server oages akgymas coisas que acontecem sao amas asuhdas</li>
-            <li>java server oages akgymas coisas que acontecem sao amas asuhdas</li>
         </ul>
+        <p class="jumbotron text-center">Cadatro Aluno</p>
+        <form action="#" method="post" name="formulario">
+            <div class="form-group">
+                <label for="nome">Nome do Aluno: </label>
+                <input type="text"  class="form-control" name="txtNome" id="nome" maxlength="50"
+                aria-describedby="emailHelp" placeholder="seu Email">
+                <small id="emailHelp" class="form-text text-muted">Nunca compartilharemos seu email com ninguem</small>
+                <label for="senha">Senha:</label>
+                <input class="form-control" type="password" name="senha" id="senha"  maxlength="10"
+                       placeholder="máx. 10 caracteres">
+            </div>
+
+            <div class="form-group">
+                <label for="endereco">Endereço do Aluno: </label>
+                <input class="form-control" type="text" name="txtEndereco" id="endereco"  maxlength="60">
+
+                <label for="bairro">Bairro: </label>
+                <input class="form-control" type="text" name="txtBairro" id="bairro"  maxlength="20">
+
+                <label for="cidade">Cidade: </label>
+                <input class="form-control"  type="text" name="txtCidade" id="cidade"  maxlength="20">
+
+                <label for="estado">Estado: </label>
+                <select name="cboEstado" id="estado" class="form-control" >
+                    <option value="sp">SP</option>
+                    <option value="sp">RJ</option>
+                    <option value="sp">BA</option>
+                    <option value="sp">MG</option>
+                    <option value="sp">PI</option>
+                    <option value="sp">CE</option>
+                    <option value="sp">MT</option>
+                    <option value="sp">MS</option>
+                    <option value="sp">DF</option>
+                    <option value="sp">GO</option>
+                    <option value="sp">ES</option>
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input class="form-control"  type="tel" name="txtTelefone" id="telefone" >
+
+                <label for="email">E-mail</label>
+                <input class="form-control"  type="email" name="txtEmail" id="email" >
+
+                <label for="url">Lattes: </label>
+                <input class="form-control"  type="url" name="txtUrl" id="url" >
+            </div>
+
+            <div class="form-group">
+                <label for="dataNasc">Data Nascimento:</label>
+                <input class="form-control"  type="date" name="txtDataNasc" id="dataNasc">
+
+                <input class="form-control-file" type="file" name="textImage" id="imagem">
+            </div>
+            <div class="">
+                <fieldset style="width:200px; height:150px;">
+                    <legend>
+                        Estado cívil
+                    </legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="estadoCivil" id="casado" value="casado"> Casado
+
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="estadoCivil" id="solteiro" value="solteiro"> Solteiro
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="estadoCivil" id="Divorciado" value="Divorciado"> Divorciado
+                    </div>
+                </fieldset>
+
+                <fieldset style="width:250px; height:150px;margin-top:20px;">
+                    <legend>
+                        Matérias cursadas
+                    </legend>
+                    <p>
+                        <input   type="checkbox" name="lp" id="lp" value="lp"> Lógica de Programação
+                    </p>
+                    <p>
+                        <input type="checkbox" name="ed" id="ed" value="ed"> Estrutura de Dados
+                    </p>
+                    <p>
+                        <input type="checkbox" name="pw" id="pw" value="pw"> Programação web
+                    </p>
+                </fieldset>
+            </div>
+            <p>
+                <input type="submit" value="ENVIAR" class="btn btn-success">
+                <input type="reset" value="Limpar" class="btn btn-warning">
+                <input type="button" name="btnLimpar" value="validar" onclick="validar();" class="btn btn-danger">
+            </p>
+
+        </form>
     </main>
     <footer>
         <p>
@@ -39,5 +141,7 @@
         </p>
     </footer>
 </div>
+
+
 </body>
 </html>

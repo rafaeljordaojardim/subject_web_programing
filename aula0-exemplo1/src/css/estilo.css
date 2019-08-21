@@ -1,0 +1,41 @@
+
+.margem{
+    margin-top:10px;
+}
+nav a{
+    display: block;
+}
+nav a:hover{
+    background-color: beige;
+    color: #000 !important;
+}
+/* comentario*/
+/* body{
+    background-color: lightblue;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+#tipoh1{
+    color: red;
+    text-align: right;
+}
+
+.tipovermelho{
+    color: red;
+    text-align: right;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+}
+.container {
+    padding: 200px;
+} */
+
