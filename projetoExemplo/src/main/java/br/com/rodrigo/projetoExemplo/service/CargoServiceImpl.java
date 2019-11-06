@@ -20,6 +20,7 @@ public class CargoServiceImpl implements CargoService {
     private CargoDao dao;
     @Override
     public void salvar(Cargo cargo) {
+
         dao.save(cargo);
     }
     @Override
