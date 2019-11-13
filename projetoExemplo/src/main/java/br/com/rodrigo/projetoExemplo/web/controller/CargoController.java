@@ -17,12 +17,14 @@ public class CargoController {
     @Autowired
     private CargoService service;
     @GetMapping("/cadastrar")
-    public String cadastrar() {
+    public String cadastrar(ModelMap model) {
+        model.addAttribute("departamentos", service.buscarTodosDepartamentos());
         return "/cargo/cadastro";
     }
 
     @GetMapping("/listar")
     public String listar(ModelMap model) {
+        model.addAttribute("cargos", service.buscarTodos());
         return "/cargo/lista";
     }
 

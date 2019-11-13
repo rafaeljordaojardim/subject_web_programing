@@ -21,7 +21,22 @@
         </nav>
     </section>
     <main>
-        <p>Sobre TagLibs</p>
+        <h1>Videos</h1>
+        <input type="text" name="url" placeholder="Coloque uma Url do Youtube"
+               onchange="insereUrl();"/>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe id="iframe" class="embed-responsive-item" src="" allowfullscreen></iframe>
+        </div>
+
+
+        <script>
+           function insereUrl() {
+                const input = document.querySelector('input[name=url]');
+                const iframe = document.getElementById('iframe');
+               console.log(iframe.src);
+                iframe.src = input.value;
+            }
+        </script>
     </main>
     <footer>
         <p>

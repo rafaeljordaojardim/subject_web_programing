@@ -1,7 +1,9 @@
 package br.com.rodrigo.projetoExemplo.service;
 
 import br.com.rodrigo.projetoExemplo.dao.CargoDao;
+import br.com.rodrigo.projetoExemplo.dao.DepartamentoDao;
 import br.com.rodrigo.projetoExemplo.domain.Cargo;
+import br.com.rodrigo.projetoExemplo.domain.Departamento;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,6 +20,8 @@ public class CargoServiceImpl implements CargoService {
     //informa ao Spring que ele deve injetar a variável anotada
     @Autowired
     private CargoDao dao;
+    @Autowired
+    private DepartamentoDao daoDep;
     @Override
     public void salvar(Cargo cargo) {
 
@@ -43,6 +47,11 @@ public class CargoServiceImpl implements CargoService {
     public List<Cargo> buscarTodos() {
 
         return dao.findAll();
+    }
+
+    @Override
+    public List<Departamento> buscarTodosDepartamentos() {
+        return daoDep.findAll();
     }
 }
 

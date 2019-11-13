@@ -1,6 +1,7 @@
 package br.com.rodrigo.projetoExemplo.service;
 
 import br.com.rodrigo.projetoExemplo.domain.Cargo;
+import br.com.rodrigo.projetoExemplo.domain.Departamento;
 
 import java.util.List;
 
@@ -15,5 +16,7 @@ public interface CargoService {
     Cargo buscarPorId(Long id);
 
     List<Cargo> buscarTodos();
+
+    List<Departamento> buscarTodosDepartamentos();
 }
 
